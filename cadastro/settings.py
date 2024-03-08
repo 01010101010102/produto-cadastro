@@ -20,7 +20,6 @@ DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
-my_cnf_path = os.path.join(BASE_DIR, '.my.cnf')
 
 # Application definition
 INSTALLED_APPS = [
@@ -32,21 +31,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # instalados
     'rest_framework',
-    'drf_spectacular',
     #meus apps
     'products',
 ]
 
-REST_FRAMEWORK = {
-'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-}
-
-SPECTACULAR_SETTINGS = {
-    'TITLE': 'Cadastro de produtos',
-    'DESCRIPTION': 'sinta-se a vontade',
-    'VERSION': '1.0.0',
-    'SERVE_INCLUDE_SCHEMA': False,
-}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
