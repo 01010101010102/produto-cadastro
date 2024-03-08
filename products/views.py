@@ -1,17 +1,15 @@
-from django.http import HttpResponse, JsonResponse
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from rest_framework.parsers import JSONParser
 
-#minhas pastas
 from products.models import Product
 from products.serializers import productsSerializer
+
 
 @api_view(['GET', 'POST'])
 def product_list(request):
     """
-    List all code Products, or create a new Product.
+    List all Products or create a new Product.
     """
     if request.method == 'GET':
         product = Product.objects.all()
@@ -28,7 +26,7 @@ def product_list(request):
 @api_view(['GET', 'PUT', 'DELETE', 'PATCH'])
 def product_detail(request, pk):
     """
-    Retrieve, update or delete a code Product.
+    Retrieve, update or delete a Product.
     """
     try:
         product = Product.objects.get(pk=pk)
@@ -51,7 +49,7 @@ def product_detail(request, pk):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
-        return Response(serializer.errors, status=204)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     elif request.method == 'DELETE':
         product.delete()

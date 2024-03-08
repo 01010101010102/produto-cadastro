@@ -60,7 +60,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'cadastro.urls'
 
-APPEND_SLASH = False
+APPEND_SLASH = True
 
 TEMPLATES = [
     {
