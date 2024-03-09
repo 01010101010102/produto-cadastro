@@ -1,0 +1,6 @@
+version: '1.0'
+services:
+  database:
+    build: .
+    ports:
+      - "3307:3307"
