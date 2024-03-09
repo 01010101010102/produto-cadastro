@@ -14,16 +14,16 @@ Este é o backend do Cadastro de Produtos, construído utilizando o [Django Rest
    ```bash
    python -m venv .cadastro
    ```
-1.1 Entre na pasta:
-
-   ```bash
-   cd .cadastro
-   ```
+   1.1 Entre na pasta:
+   
+      ```bash
+      cd .cadastro
+      ```
 
 2. Ative o ambiente virtual:
 
    ```bash
-   source .cadastro/bin/activate
+   source /bin/activate
    ```
 
 3. Clone o repositório:
