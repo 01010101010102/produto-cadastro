@@ -1,64 +1,75 @@
-# Backend da Cadastro de Produtos
+# Backend do Cadastro de Produtos
 
-Este é o backend de da Cadastro de Produtos. O backend é construído utilizando [django-rest-framework.], e fornece APIs para deletar, cadastrar, editar e atulizar produtos.
+Este é o backend do Cadastro de Produtos, construído utilizando o [Django Rest Framework](https://www.django-rest-framework.org/), fornecendo APIs para deletar, cadastrar, editar e atualizar produtos.
 
-## Instalação
+## Pré-requisitos
 
-1. git clone https://github.com/01010101010102/produto-cadastro.git
-2. cd produto-cadastro
-3. source bin/activate
-4. pip install -r requirements.txt
-5. copie o que está em exemplo.env e crie um arquivo .env na raiz do projeto, onde está manager.py, e cole. Preencha as variaveis.
-6. no console: python manage.py runserver
-7. docker build -t meu-mysql .
-8. docker run --name meu-mysql -d -p 3309:3309 meu-mysql
+1. Python >= 3.6
+2. Docker e Docker Compose
 
-## Configuração
+## Instalação, Configuração e Uso
 
-1. Crie um arquivo `.env` na raiz do projeto.
-2. Adicione as seguintes variáveis de ambiente ao arquivo `.env`:
+1. Crie um ambiente virtual:
 
-```
-PORT=3000
-DATABASE_URL=URL_DO_BANCO_DE_DADOS
-```
+   ```bash
+   python -m venv .cadastro
+   ```
 
-Substitua `URL_DO_BANCO_DE_DADOS` pela URL do seu banco de dados.
+2. Ative o ambiente virtual:
 
-## Uso
+   ```bash
+   source .cadastro/bin/activate
+   ```
 
-1. Execute `npm start` para iniciar o servidor.
-2. O servidor estará disponível em `http://localhost:3000` por padrão, a menos que a porta seja alterada no arquivo `.env`.
+3. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/01010101010102/produto-cadastro.git
+   ```
+
+4. Navegue até o diretório clonado:
+
+   ```bash
+   cd produto-cadastro
+   ```
+
+5. Instale as dependências:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+6. Copie o que está em exemplo.env -a fim de teste, use os mesmos valores- e crie um arquivo .env na raiz do projeto, onde está manager.py, e cole.os valores necessários.
+
+7. Navegue até o diretório `MYSQL`:
+
+   ```bash
+   cd MYSQL
+   ```
+
+8. Construa os containers Docker:
+
+   ```bash
+   docker-compose build
+   ```
+
+9. Inicie os containers Docker:
+
+   ```bash
+   docker-compose up
+   ```
+
+10. Em outro terminal, execute o servidor Django:
+    ```bash
+    python manage.py runserver
+    ```
 
 ## APIs Disponíveis
 
-- [POSTMAN](https://documenter.getpostman.com/view/31135629/2sA2xh2CNZ)
+- Documentação no [Postman](https://documenter.getpostman.com/view/31135629/2sA2xh2CNZ)
 
-## Contribuição
+## Autor
 
-Contribuições são bem-vindas! Para contribuir com o backend da aplicação XYZ, siga estas etapas:
-
-1. Faça um fork deste repositório.
-2. Crie uma branch para sua modificação (`git checkout -b feature/nova-feature`).
-3. Faça commit de suas alterações (`git commit -am 'Adiciona nova feature'`).
-4. Faça push para a branch (`git push origin feature/nova-feature`).
-5. Crie um novo Pull Request.
-
-## Autores
-
-- Nome do Autor 1 - [NomeDoGitHub1](https://github.com/NomeDoGitHub1)
-- Nome do Autor 2 - [NomeDoGitHub2](https://github.com/NomeDoGitHub2)
-
-## Licença
-
-Este projeto está licenciado sob a [Licença XYZ](https://opensource.org/licenses/XYZ).
-
-## Agradecimentos
-
-- Agradecimento 1
-- Agradecimento 2
-- ...
-
----
-
-Sinta-se à vontade para personalizar o README de acordo com as necessidades específicas do seu projeto.
+- Ruan Carlos Ramalho Costa
+  - [GitHub](https://github.com/01010101010102/)
+  - [LinkedIn](www.linkedin.com/in/ruan-carlos-ramalho-costa-67767b215)
