@@ -4,7 +4,7 @@ Este é o backend do Cadastro de Produtos, construído utilizando o [Django Rest
 
 ## Pré-requisitos
 
-1. Python >= 3.6
+1. Python >= 3.10
 2. Docker e Docker Compose
 
 ## Instalação, Configuração e Uso
