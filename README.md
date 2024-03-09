@@ -23,7 +23,7 @@ Este é o backend do Cadastro de Produtos, construído utilizando o [Django Rest
 2. Ative o ambiente virtual:
 
    ```bash
-   source /bin/activate
+   source bin/activate
    ```
 
 3. Clone o repositório:
