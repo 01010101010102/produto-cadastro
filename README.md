@@ -63,8 +63,13 @@ Este é o backend do Cadastro de Produtos, construído utilizando o [Django Rest
    ```bash
    docker-compose up
    ```
+   
+10. Em outro terminal, com ambiente virtual ligado e no mesmo diretorio de migrate.py:
+    ```bash
+    python manage.py migrate
+    ```
 
-10. Em outro terminal, execute o servidor Django:
+11. Execute o servidor Django:
     ```bash
     python manage.py runserver
     ```
