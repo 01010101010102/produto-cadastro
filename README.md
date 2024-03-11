@@ -64,7 +64,7 @@ Este é o backend do Cadastro de Produtos, construído utilizando o [Django Rest
    docker-compose up
    ```
    
-10. Em outro terminal, com ambiente virtual ligado e no mesmo diretorio de migrate.py:
+10. Em outro terminal, com ambiente virtual ligado e no mesmo diretorio de manager.py:
     ```bash
     python manage.py migrate
     ```
